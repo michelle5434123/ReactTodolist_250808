@@ -1,0 +1,80 @@
+.container {
+  gap: 20px; /* optional: space between the two sections */
+  align-items: stretch; /* ensure children match height */
+  min-height: 400px; /* or any height */
+}
+
+.container > h3{
+  text-align: left;
+  padding-left: 25px;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #FFF8F5;
+}
+
+.inputForm, .outputForm {
+  border: 1px solid #ccc;
+  padding-block: 25px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.inputForm > label{
+  font-size: 16px;
+}
+
+.inputForm > .category-select {
+  font-size: 16px;
+  margin-inline: 5px;
+}
+
+.inputForm > input, textarea {
+  font-family: "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 5px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn, .delete-btn {
+  width: auto;
+  background: #FC654D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: end;
+  font-size: 14px;
+  height: 40px;
+  width: 100px;
+  margin: 10px;
+  font-weight: normal;
+  align-self: end;
+
+}
+
+.outputForm > table {
+  width: 100%;
+  border-collapse: collapse;
+  align-items: stretch;
+  min-height: 200px;
+}
+
+.outputForm > th, td {
+  font-weight: normal;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+
