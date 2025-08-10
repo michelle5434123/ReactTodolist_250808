@@ -1,12 +1,60 @@
-# React + Vite
+# 📝 ReactTodolist_0808
+I rebuilt [To do Lists_0725](https://github.com/michelle5434123/To-do-Lists_250725)) with React to help user to organize their events. This React-based To-Do List application allows users to add, view, and clear tasks. Tasks include a category, name, date, and description.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/d4c4cd6e-a0a9-4cfc-b0e3-d2e809ed82d8)
 
-Currently, two official plugins are available:
+## Features
+- Add tasks with:
+  - Category (Work, Family, Me, or blank)
+  - Task name
+  - Date (defaults to today’s date)
+  - Description
+- Dynamic task table that updates as tasks are added.
+- Clear all tasks with a single button click.
+- Graceful handling of empty inputs (stores them as null).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## How It Works
+- The app consists of two main components:
+  - `App.jsx`: Handles state (`count`) and renders the counter interface
+  - `Footer.jsx`: Renders the footer content
+- `useState` from React is used to keep track of the number of people
+- Button clicks call `add()` or `subtract()` to adjust the count
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **State** `formDataList` holds an array of task objects.
+- Adding a Task: `addTask()`
+  - When the form is submitted, `addTask()`:
+    - Loops over all expected fields (`selectCategory`, `taskname`, `datename`, `descriptionname`)
+    - Retrieves and `trims()` the value.
+    - Stores `null` if the field is empty.
+    - Appends the newtask to `formDataList`.
+- Displaying Tasks: `formDate()` maps over `formDataList` to generate `<tr>` table rows.
+- Deleting All Tasks: The "Delete All" button clears `formDataList`.
+
+
+## Notes
+- Today is dynamically generated using `const today = new Date().toISOString().split("T")[0];`
+
+
+## How to Run This Project Locally
+These instructions assume you have **Node.js** and **npm** installed on your computer. If not, download them from [nodejs.org](https://nodejs.org/).
+
+### 1. Clone or Download the Repo
+Click on the green **Code** button and choose **Download ZIP** or use Git:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+### 2. Install Dependencies:
+Make sure react, react-dom, and vite are included in your package.json
+```bash
+npm install
+```
+### 3. Start the Development Server
+If you’re using Vite (recommended for this setup):
+```bash
+npm run dev
+```
+This will start the server and Open the link in your browser.
+
+
