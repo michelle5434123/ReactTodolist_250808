@@ -1,5 +1,5 @@
 # 📝 ReactTodolist_0808
-I rebuilt [To do Lists_0725](https://github.com/michelle5434123/To-do-Lists_250725)) with React to help user to organize their events. This React-based To-Do List application allows users to add, view, and clear tasks. Tasks include a category, name, date, and description.
+I rebuilt [To do Lists_0725](https://github.com/michelle5434123/To-do-Lists_250725)) with React to help user to organize their events. This React-based To-Do List application allows to add, view, and clear tasks. Tasks include a category, name, date, and description.
 
 ![image](https://github.com/user-attachments/assets/d4c4cd6e-a0a9-4cfc-b0e3-d2e809ed82d8)
 
@@ -15,21 +15,16 @@ I rebuilt [To do Lists_0725](https://github.com/michelle5434123/To-do-Lists_2507
 
 
 ## How It Works
-- The app consists of two main components:
-  - `App.jsx`: Handles state (`count`) and renders the counter interface
-  - `Footer.jsx`: Renders the footer content
-- `useState` from React is used to keep track of the number of people
-- Button clicks call `add()` or `subtract()` to adjust the count
-
 - **State** `formDataList` holds an array of task objects.
-- Adding a Task: `addTask()`
+- Each `input` is wraped with **`label` for accessability**
+- Adding a Task: **`addTask()`**
   - When the form is submitted, `addTask()`:
     - Loops over all expected fields (`selectCategory`, `taskname`, `datename`, `descriptionname`)
-    - Retrieves and `trims()` the value.
+    - **Retrieves and `trims()`** the value.
     - Stores `null` if the field is empty.
     - Appends the newtask to `formDataList`.
-- Displaying Tasks: `formDate()` maps over `formDataList` to generate `<tr>` table rows.
-- Deleting All Tasks: The "Delete All" button clears `formDataList`.
+- Displaying Tasks: **`formDate()` maps over `formDataList` to generate `<tr>` table rows.**
+- Deleting All Tasks: The **"Delete All"** button clears `formDataList`.
 
 
 ## Notes
