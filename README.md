@@ -1,5 +1,5 @@
 # 📝 ReactTodolist_0808
-I rebuilt [To do Lists_0725](https://github.com/michelle5434123/To-do-Lists_250725)) with React to help user to organize their events. This React-based To-Do List application allows to add, view, and clear tasks. Tasks include a category, name, date, and description.
+I rebuilt [To do Lists_0725](https://github.com/michelle5434123/To-do-Lists_250725) with React to help user to organize their events. This React-based To-Do List application allows to add, view, and clear tasks. Tasks include a category, name, date, and description.
 
 ![image](https://github.com/user-attachments/assets/d4c4cd6e-a0a9-4cfc-b0e3-d2e809ed82d8)
 
